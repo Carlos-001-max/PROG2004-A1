@@ -40,6 +40,7 @@ public class HealthProfessional {
         System.out.println("ID: " + id + ", Name: " + name + ", Specialization: " + specialization);
     }
 
+
     // Getter methods
     public int getId() { return id; }
     public String getName() { return name; }
