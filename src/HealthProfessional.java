@@ -1,18 +1,16 @@
 /**
  * Base class for all health professionals
- * This class contains common attributes for all health professionals
+ * Contains common attributes for all health professionals
  */
 public class HealthProfessional {
-    // Required instance variables: ID (numbers only) and name
+    // Required instance variables: ID and name
     private int id;
     private String name;
-
-    // Another instance variable that is relevant to describe basic information
+    // Another relevant instance variable
     private String specialization;
 
     /**
      * Default constructor
-     * Initializes instance variables with default values
      */
     public HealthProfessional() {
         this.id = 0;
@@ -21,10 +19,7 @@ public class HealthProfessional {
     }
 
     /**
-     * Constructor that initializes all instance variables
-     * @param id the health professional's ID
-     * @param name the health professional's name
-     * @param specialization the health professional's specialization
+     * Second constructor that initializes all instance variables
      */
     public HealthProfessional(int id, String name, String specialization) {
         this.id = id;
@@ -33,8 +28,7 @@ public class HealthProfessional {
     }
 
     /**
-     * Prints all instance variables
-     * Displays ID, name and specialization
+     * Method that prints all instance variables
      */
     public void printDetails() {
         System.out.println("ID: " + id + ", Name: " + name + ", Specialization: " + specialization);
