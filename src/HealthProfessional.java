@@ -45,6 +45,7 @@ public class HealthProfessional {
     public String getName() { return name; }
     public String getSpecialization() { return specialization; }
 
+
     // Setter methods
     public void setId(int id) { this.id = id; }
     public void setName(String name) { this.name = name; }
