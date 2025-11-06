@@ -104,6 +104,7 @@ public class AssignmentOne {
             }
         }
 
+
         if (!found) {
             System.out.println("Error: No appointment found with mobile number: " + patientMobile);
         }
