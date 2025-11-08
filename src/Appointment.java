@@ -34,11 +34,11 @@ public class Appointment {
      * Method that prints all instance variables
      */
     public void printAppointmentDetails() {
-        System.out.println("Patient Name: " + patientName);
-        System.out.println("Patient Mobile: " + patientMobile);
-        System.out.println("Time Slot: " + timeSlot);
-        System.out.println("Selected Doctor: " + selectedDoctor.getName());
-        System.out.println("Doctor Type: " + selectedDoctor.getClass().getSimpleName());
+        System.out.println("Patient Name: " + getPatientName());
+        System.out.println("Patient Mobile: " + getPatientMobile());
+        System.out.println("Time Slot: " + getTimeSlot());
+        System.out.println("Selected Doctor: " + getSelectedDoctor().getName());
+        System.out.println("Doctor Type: " + getSelectedDoctor().getClass().getSimpleName());
         System.out.println("----------------------------------------");
     }
 

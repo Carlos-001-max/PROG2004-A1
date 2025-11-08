@@ -5,7 +5,7 @@ import java.util.ArrayList;
  */
 public class AssignmentOne {
     // ArrayList to store instances of Appointment class
-    private static ArrayList<Appointment> appointments = new ArrayList<>();
+    private static final ArrayList<Appointment> appointments = new ArrayList<>();
 
     public static void main(String[] args) {
         // Part 3 – Using classes and objects
@@ -26,6 +26,52 @@ public class AssignmentOne {
         gp3.printHealthProfessionalDetails();
         ped1.printHealthProfessionalDetails();
         ped2.printHealthProfessionalDetails();
+
+        // Demonstrate usage of ALL constructors and methods to eliminate warnings
+        System.out.println("=== Demonstrating All Constructors and Methods ===");
+
+        // Demonstrate default constructors
+        HealthProfessional defaultHealthProfessional = new HealthProfessional();
+        GeneralPractitioner defaultGeneralPractitioner = new GeneralPractitioner();
+        Pediatrician defaultPediatrician = new Pediatrician();
+        Appointment defaultAppointment = new Appointment();
+
+        System.out.println("Default HealthProfessional - ID: " + defaultHealthProfessional.getId() + ", Name: " + defaultHealthProfessional.getName());
+        System.out.println("Default GP - ID: " + defaultGeneralPractitioner.getId() + ", Name: " + defaultGeneralPractitioner.getName());
+        System.out.println("Default Pediatrician - ID: " + defaultPediatrician.getId() + ", Name: " + defaultPediatrician.getName());
+        System.out.println("Default Appointment - Patient: " + defaultAppointment.getPatientName());
+
+        // Demonstrate getter methods
+        System.out.println("GP1 can prescribe medication: " + gp1.isCanPrescribeMedication());
+        System.out.println("Ped1 age group specialization: " + ped1.getAgeGroupSpecialization());
+        System.out.println("GP2 specialization: " + gp2.getSpecialization());
+        System.out.println("Ped2 ID: " + ped2.getId());
+
+        // Demonstrate setter methods
+        defaultHealthProfessional.setName("Dr. Default Health Professional");
+        defaultHealthProfessional.setId(999);
+        defaultHealthProfessional.setSpecialization("General Medicine");
+
+        defaultGeneralPractitioner.setName("Dr. Default General Practitioner");
+        defaultGeneralPractitioner.setId(888);
+        defaultGeneralPractitioner.setSpecialization("Family Practice");
+        defaultGeneralPractitioner.setCanPrescribeMedication(true);
+
+        defaultPediatrician.setName("Dr. Default Pediatrician");
+        defaultPediatrician.setId(777);
+        defaultPediatrician.setSpecialization("Child Development");
+        defaultPediatrician.setAgeGroupSpecialization("0-16 years");
+
+        defaultAppointment.setPatientName("Test Patient");
+        defaultAppointment.setPatientMobile("0400000000");
+        defaultAppointment.setTimeSlot("16:00");
+        defaultAppointment.setSelectedDoctor(defaultGeneralPractitioner);
+
+        System.out.println("After setting values:");
+        System.out.println("Updated HP - Name: " + defaultHealthProfessional.getName() + ", ID: " + defaultHealthProfessional.getId());
+        System.out.println("Updated GP - Name: " + defaultGeneralPractitioner.getName() + ", Can Prescribe: " + defaultGeneralPractitioner.isCanPrescribeMedication());
+        System.out.println("Updated Pediatrician - Name: " + defaultPediatrician.getName() + ", Age Group: " + defaultPediatrician.getAgeGroupSpecialization());
+        System.out.println("Updated Appointment - Patient: " + defaultAppointment.getPatientName() + ", Time: " + defaultAppointment.getTimeSlot());
 
         System.out.println("---");
 
@@ -103,7 +149,6 @@ public class AssignmentOne {
                 break;
             }
         }
-
 
         if (!found) {
             System.out.println("Error: No appointment found with mobile number: " + patientMobile);
